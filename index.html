@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="src/tabsy.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- Container -->
+    <ul id="tabs1">
+      <!-- Tabs -->
+      <li>
+        <a href="#tab1">Tab 1</a>
+      </li>
+      <li>
+        <a href="#tab2">Tab 2</a>
+      </li>
+      <li>
+        <a href="#tab3">Tab 3</a>
+      </li>
+    </ul>
+    <!-- Panels -->
+    <div id="tab1">
+      <p>Tab 1 content</p>
+    </div>
+    <div id="tab2">
+      <p>Tab 2 content</p>
+    </div>
+    <div id="tab3">
+      <p>Tab 3 content</p>
+    </div>
+    <!-- Container 2 -->
+    <ul id="tabs2">
+      <!-- Tabs -->
+      <li>
+        <a href="#tabA">Tab A</a>
+      </li>
+      <li>
+        <a href="#tabB">Tab B</a>
+      </li>
+      <li>
+        <a href="#tabC">Tab C</a>
+      </li>
+    </ul>
+    <!-- Panels -->
+    <div id="tabA">
+      <p>Tab A content</p>
+    </div>
+    <div id="tabB">
+      <p>Tab B content</p>
+    </div>
+    <div id="tabC">
+      <p>Tab C content</p>
+    </div>
+    <script src="src/tabsy.js"></script>
+    <script>
+      const tabs1 = new Tabsy("#tabs1", {
+        rememberTab: true,
+        onChange: (data) => {
+          // data-tab, data-panel
+          console.log(data);
+        },
+      });
+      const tabs2 = new Tabsy("#tabs2", {
+        rememberTab: true,
+      });
+    </script>
+  </body>
+</html>
