@@ -145,3 +145,5 @@ Tabsy.prototype.destroy = function () {
   this.panels = null;
   this.currentTab = null;
 };
+
+window.Tabsy = Tabsy;
